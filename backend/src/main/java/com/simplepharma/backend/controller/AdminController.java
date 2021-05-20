@@ -13,7 +13,10 @@ import com.simplepharma.backend.model.Product;
 import com.simplepharma.backend.repository.CartRepository;
 import com.simplepharma.backend.repository.OrderRepository;
 import com.simplepharma.backend.repository.ProductRepository;
+import com.simplepharma.backend.service.MyUserDetailService;
 import com.simplepharma.backend.util.Validator;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -29,6 +32,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/admin")
 public class AdminController {
+
+	private static final Logger logger = LogManager.getLogger(AdminController.class);
 
 	@Autowired
 	private ProductRepository prodRepo;
@@ -64,6 +69,7 @@ public class AdminController {
 					prod.setProductImage(prodImage.getBytes());
 				}
 				prodRepo.save(prod);
+				logger.info("Product added.");
 //				jmsTemplate.convertAndSend("product_queue", prod);
 				resp.setStatus(ResponseCode.SUCCESS_CODE);
 				resp.setMessage(ResponseCode.ADD_SUCCESS_MESSAGE);
@@ -95,6 +101,7 @@ public class AdminController {
 					Product prod = new Product(Integer.parseInt(productid), description, productname,
 							Double.parseDouble(price), Integer.parseInt(quantity), prodImage.getBytes());
 					prodRepo.save(prod);
+					logger.info("Product Updated.");
 				} else {
 					Product prodOrg = prodRepo.findByProductId(Integer.parseInt(productid));
 					Product prod = new Product(Integer.parseInt(productid), description, productname,
@@ -121,6 +128,7 @@ public class AdminController {
 		} else {
 			try {
 				prodRepo.deleteByProductId(Integer.parseInt(productid));
+				logger.info("Product deleted.");
 				resp.setStatus(ResponseCode.SUCCESS_CODE);
 				resp.setMessage(ResponseCode.DEL_SUCCESS_MESSAGE);
 			} catch (Exception e) {
