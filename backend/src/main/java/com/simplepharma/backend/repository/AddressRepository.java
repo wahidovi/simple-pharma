@@ -1,7 +1,7 @@
 package com.simplepharma.backend.repository;
 
-import com.ecommerce.simplepharmabackend.model.Address;
-import com.ecommerce.simplepharmabackend.model.User;
+import com.simplepharma.backend.model.Address;
+import com.simplepharma.backend.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
