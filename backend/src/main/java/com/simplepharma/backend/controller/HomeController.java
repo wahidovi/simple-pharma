@@ -89,7 +89,7 @@ public class HomeController {
 				userRepo.save(user);
 			}
 		} catch (Exception e) {
-			throw new UserCustomException("An error occured while saving user, please check details or try again");
+			throw new UserCustomException("An error occurred while saving user, please check details or try again");
 		}
 		return new ResponseEntity<ServerDto>(resp, HttpStatus.ACCEPTED);
 	}
