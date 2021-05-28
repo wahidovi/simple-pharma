@@ -3,9 +3,25 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseUrl:"http://localhost:8087",
+  signupUrl : "/home/signup",
+  loginUrl : "/home/auth",
+  addToCartUrl : "/user/addToCart",
+  viewCartUrl : "/user/viewCart",
+  updateCartUrl : "/user/updateCart",
+  deleteCartUrl: "/user/delCart",
+  addAddressUrl : "/user/addAddress",
+  viewAddressUrl : "/user/getAddress",
+  productsUrl : "/user/getProducts",
+  addProductUrl : "/admin/addProduct",
+  deleteProductUrl : "/admin/delProduct",
+  updateProductUrl : "/admin/updateProducts",
+  viewOrderUrl : "/admin/viewOrders",
+  updateOrderUrl : "/admin/updateOrder",
+  placeOrderUrl : "/user/placeOrder",
+  logoutUrl : "/home/logout",
 };
-
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
