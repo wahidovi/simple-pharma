@@ -86,6 +86,8 @@ public class HomeController {
 			} else {
 				resp.setStatus(ResponseCode.SUCCESS_CODE);
 				resp.setMessage(ResponseCode.CUST_REG);
+				user.setEnabled(true);
+				user.setUserType("CUSTOMER");
 				userRepo.save(user);
 			}
 		} catch (Exception e) {
