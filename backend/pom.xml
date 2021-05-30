@@ -97,6 +97,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>simple-pharma-backend</finalName>
 	</build>
 
 </project>
