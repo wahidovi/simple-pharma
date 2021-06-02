@@ -3,5 +3,6 @@ export interface User {
   username: string;
   password: string;
   usertype: string;
+  isEnabled: boolean,
   age: string;
 }

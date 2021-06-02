@@ -23,7 +23,8 @@ export class RegisterComponent implements OnInit {
       password: '',
       username: '',
       age: '',
-      usertype: 'customer'
+      isEnabled: true,
+      usertype: 'admin'
     });
   }
   register(): void {
