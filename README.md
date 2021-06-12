@@ -4,8 +4,7 @@
 
 It’s like an ecommerce project. An online pharmacy Name (Simple Pharma) it sells medicine. 
 For users, users can create an account and checkout (A dummy checkout) . 
-For Admin, Admin can add an item/ product with image, Price and description. Admin can also make an item/product out of stock or disable. 
-Additional feature, (if possible, not required) some medicine will require prescription. So when people buy to certain medicine it will ask user to upload a photo of the prescription.
+For Admin, Admin can add an item/ product with image, Price and description. 
 
 Tech Stack:
 > 1. Angular Spring boot with Maven
