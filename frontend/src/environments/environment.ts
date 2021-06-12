@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  baseUrl:"http://localhost:8087",
+  //baseUrl:"http://simplepharma3-env.eba-mucuvyje.us-east-1.elasticbeanstalk.com:5000",
+  baseUrl:"http://localhost:5000",
   signupUrl : "/home/signup",
   loginUrl : "/home/auth",
   addToCartUrl : "/user/addToCart",

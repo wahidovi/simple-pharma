@@ -13,6 +13,7 @@ export class NavigationComponent implements OnInit {
 
     if (this.auth.getAuthType() == null) {
       this.loggedType = "home";
+     //this.loggedType = "customer";
     } else {
       if (this.auth.getAuthType() == "customer") {
         this.loggedType = "customer";
@@ -30,7 +31,14 @@ export class NavigationComponent implements OnInit {
     this.loggedType = "home";
     this.auth.removeToken();
     this.auth.logout();
-    this.route.navigate(['/login']);
+    this.route.navigate(['/home']);
   }
+
+  // logout() {
+  //   this.loggedType = "customer";
+  //   this.auth.removeToken();
+  //   this.auth.logout();
+  //   this.route.navigate(['/home']);
+  // }
 
 }

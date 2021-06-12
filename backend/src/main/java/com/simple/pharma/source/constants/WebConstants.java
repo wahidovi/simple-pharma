@@ -33,5 +33,6 @@ public class WebConstants {
 
 	// Domains
 	public static final String ALLOWED_URL = "http://localhost:4200";
+	//public static final String ALLOWED_URL = "http://simplepharma3.s3-website.us-east-2.amazonaws.com";
 
 }

@@ -20,8 +20,8 @@ export class AppComponent implements OnInit {
       } else if (this.auth.isAuthenticated()!=null && this.auth.getAuthType() == "customer") {
         this.router.navigate(["/admin"]);
       } else {
-        this.router.navigate(["/login"]);
+        this.router.navigate(["/home"]);
       }
-   
+
   }
 }

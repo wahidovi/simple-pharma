@@ -5,6 +5,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01" [ngSwitch]="loggedType">
+
         <div *ngSwitchCase="'home'">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item">
@@ -12,9 +13,16 @@
             </li>
             <li class="nav-item">
               <a class=" nav-link" routerLink="/login">Login</a>
-            </li>
+              </li>
+              <li class="nav-item ">
+                <a class=" nav-link active" routerLink="/register">Please Register before you buy medicine.</a>
+                </li>
           </ul>
         </div>
+
+
+
+
         <div class="ml-auto" *ngSwitchCase="'customer'">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li class="nav-item">
